@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ezen.koh13.company.Service3">
+<insert id="companyinsert">
+insert into company309 values(#{param1},#{param2},#{param3},#{param4},#{param5})
+</insert>
+<select id="compantout" resultType="com.ezen.koh13.company.CompanyDTO">
+	select * from company309
+</select>
+<select id="scodesesrch" resultType="int">
+  select count(*) from company309 where scode = #{param1}
+</select>
+</mapper>
